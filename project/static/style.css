@@ -1,0 +1,31 @@
+
+body {
+  margin-top: 20px;
+  color: grey;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2em !important;
+  line-height: 2;
+}
+
+h1 {
+  font-size: 2.2em
+}
+
+h2 {
+  font-size: 2.05em;
+}
+
+h3 {
+  font-size: 2.05em
+}
+
+h4 {
+  font-size: 2.02em
+}
+
+ul, li {
+  list-style: none;
+  text-decoration: none;
+  color: #3CB371;
+
+}
