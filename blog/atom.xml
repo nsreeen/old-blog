@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Postings</title>
+  <id>/blog/atom.xml</id>
+  <updated>2017-03-03T12:00:00Z</updated>
+  <link href="/blog/atom.xml" rel="self" />
+  <author>
+    <name>Unknown author</name>
+  </author>
+  <generator>Werkzeug</generator>
+  <entry xml:base="/blog/atom.xml">
+    <title type="text">Mutable Default Parameters in Python</title>
+    <id>blog/mutable-default-parameters.html</id>
+    <updated>2017-03-03T12:00:00Z</updated>
+    <link href="blog/mutable-default-parameters.html" />
+  </entry>
+</feed>
