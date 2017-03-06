@@ -17,16 +17,16 @@ def entries_list(pages, limit=None):
     entries = sorted(entries, reverse=True)
     return entries[:limit]
 
-@app.route('/blog/atom.xml')
+@app.route('/atom.xml')
 def blog_feed():
     feed = AtomFeed('Recent Blog Postings',
-                    feed_url='/blog/atom.xml')#+url_for('blog_feed'),
+                    feed_url='/atom.xml')#+url_for('blog_feed'),
                     #url='/')
     blog_list = entries_list(pages, 10)
     for b in blog_list:
         feed.add(b.meta['title'],
                  content_type='html',
-                 url='blog/'+b.path+'.html',
+                 url=b.path,
                  updated=b.meta['date'])
                  #published=b.meta['published'])
     return feed.get_response()
