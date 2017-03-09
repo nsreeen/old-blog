@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Recent Blog Postings</title>
   <id>/atom.xml</id>
-  <updated>2017-03-03T12:00:00Z</updated>
+  <updated>2017-03-09T17:00:00Z</updated>
   <link href="/atom.xml" rel="self" />
   <author>
     <name>Unknown author</name>
@@ -13,5 +13,11 @@
     <id>mutable-default-parameters</id>
     <updated>2017-03-03T12:00:00Z</updated>
     <link href="mutable-default-parameters" />
+  </entry>
+  <entry xml:base="/atom.xml">
+    <title type="text">Three weeks at RC - some reflections</title>
+    <id>Three weeks at RC - some reflections</id>
+    <updated>2017-03-09T17:00:00Z</updated>
+    <link href="Three weeks at RC - some reflections" />
   </entry>
 </feed>
