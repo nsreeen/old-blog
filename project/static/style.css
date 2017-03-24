@@ -8,26 +8,38 @@ body {
 }
 
 h1 {
-  font-size: 2em;
-  margin-bottom: 30px;
+  font-size: 1.1em;
+  margin-bottom: 10px;
 }
 
 h2 {
   font-size: 1.8em;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 h3 {
-  font-size: 1.7em;
+  font-size: 1.2em;
 }
 
 h4 {
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
 
-ul, li {
+.page-list > ul, li {
   list-style: none;
   text-decoration: none;
   color: #3CB371;
+}
 
+#header {
+  border-bottom: 1px solid LightGrey;
+}
+
+#all-posts-page {
+  font-size: 1em;
+
+}
+
+#all-posts-page > h2 {
+  font-size: 1em;
 }

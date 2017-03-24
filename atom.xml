@@ -2,22 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Recent Blog Postings</title>
   <id>/atom.xml</id>
-  <updated>2017-03-09T17:00:00Z</updated>
+  <updated>2017-03-24T14:20:00Z</updated>
   <link href="/atom.xml" rel="self" />
   <author>
     <name>Unknown author</name>
   </author>
   <generator>Werkzeug</generator>
   <entry xml:base="/atom.xml">
-    <title type="text">Mutable Default Parameters in Python</title>
-    <id>mutable-default-parameters</id>
-    <updated>2017-03-03T12:00:00Z</updated>
-    <link href="mutable-default-parameters" />
+    <title type="text">Web accessibility and web accessibility testing</title>
+    <id>web accessibility and web accessibility testing</id>
+    <updated>2017-03-24T14:20:00Z</updated>
+    <link href="web accessibility and web accessibility testing" />
   </entry>
   <entry xml:base="/atom.xml">
     <title type="text">Three weeks at RC - some reflections</title>
     <id>Three weeks at RC - some reflections</id>
     <updated>2017-03-09T17:00:00Z</updated>
     <link href="Three weeks at RC - some reflections" />
+  </entry>
+  <entry xml:base="/atom.xml">
+    <title type="text">Mutable Default Parameters in Python</title>
+    <id>mutable-default-parameters</id>
+    <updated>2017-03-03T12:00:00Z</updated>
+    <link href="mutable-default-parameters" />
   </entry>
 </feed>
