@@ -9,12 +9,6 @@
   </author>
   <generator>Werkzeug</generator>
   <entry xml:base="/atom.xml">
-    <title type="text">Web accessibility and web accessibility testing</title>
-    <id>web accessibility and web accessibility testing</id>
-    <updated>2017-03-24T14:20:00Z</updated>
-    <link href="web accessibility and web accessibility testing" />
-  </entry>
-  <entry xml:base="/atom.xml">
     <title type="text">Three weeks at RC - some reflections</title>
     <id>Three weeks at RC - some reflections</id>
     <updated>2017-03-09T17:00:00Z</updated>
@@ -25,5 +19,17 @@
     <id>mutable-default-parameters</id>
     <updated>2017-03-03T12:00:00Z</updated>
     <link href="mutable-default-parameters" />
+  </entry>
+  <entry xml:base="/atom.xml">
+    <title type="text">Web accessibility and web accessibility testing</title>
+    <id>web accessibility and web accessibility testing</id>
+    <updated>2017-03-24T14:20:00Z</updated>
+    <link href="web accessibility and web accessibility testing" />
+  </entry>
+  <entry xml:base="/atom.xml">
+    <title type="text">How accessible is this blog?</title>
+    <id>how-accessible-is-this-blog</id>
+    <updated>2017-03-24T14:00:00Z</updated>
+    <link href="how-accessible-is-this-blog" />
   </entry>
 </feed>
