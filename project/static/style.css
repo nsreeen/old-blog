@@ -1,7 +1,6 @@
-
 body {
   margin-top: 20px;
-  color:  #515151 ;
+  color: grey;
   font-family: 'Quicksand', sans-serif;
   font-size: 2em !important;
   line-height: 2;
@@ -25,7 +24,12 @@ h4 {
   font-size: 1.1em;
 }
 
-.page-list > ul, li {
+li {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.page-list > li {
   list-style: none;
   text-decoration: none;
   color: #3CB371;
@@ -43,3 +47,45 @@ h4 {
 #all-posts-page > h2 {
   font-size: 1em;
 }
+
+
+
+
+/*
+body {
+  margin-top: 20px;
+  color: grey;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2em !important;
+  line-height: 2;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 1.7em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+page-list > li {
+  list-style: none;
+  text-decoration: none;
+  color: #3CB371;
+}
+
+li {
+  text-decoration: none;
+}
+*/

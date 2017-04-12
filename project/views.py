@@ -5,7 +5,9 @@ from werkzeug.contrib.atom import AtomFeed
 @app.route('/')
 def index():
     posts = [page for page in pages]
-    return render_template('index.html', pages=posts)
+    ordered_posts = sorted(posts, reverse=True,
+     key=lambda p: p.meta['date'])
+    return render_template('index.html', pages=ordered_posts)
 
 @app.route('/<path:path>/')
 def page(path):
