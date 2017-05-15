@@ -9,6 +9,13 @@ def index():
      key=lambda p: p.meta['date'])
     return render_template('index.html', pages=ordered_posts)
 
+@app.route('/notes')
+def notes():
+    posts = [page for page in pages]
+    ordered_posts = sorted(posts, reverse=True,
+     key=lambda p: p.meta['date'])
+    return render_template('notes.html', pages=ordered_posts)
+
 @app.route('/<path:path>/')
 def page(path):
     page = pages.get_or_404(path)

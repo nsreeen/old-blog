@@ -1,8 +1,9 @@
 title: How accessible is this blog?
 date: 2017-03-24 14:00:00
+type: post
 
 
-<br>To understand web accessibility better, I decided to audit my own blog.  The blog is small (at time of writing four pages including the main page!), 
+<br>To understand web accessibility better, I decided to audit my own blog.  The blog is small (at time of writing four pages including the main page!),
 but I am interested to see what kinds of issues come up even before adding complicated features and substantial content to a site.
 <br>
 <br>
@@ -76,7 +77,7 @@ the scope of definitive automated testing, which could be very helpful.
 <br>
 
 ###3) Navigate the site using only a keyboard
-<br>I navigated through my blog using tab, alt&tab (to go back), and enter (to select).  This was straightforward because there are only a few pages. 
+<br>I navigated through my blog using tab, alt&tab (to go back), and enter (to select).  This was straightforward because there are only a few pages.
 <br>
 <br>
 <br>
@@ -85,7 +86,7 @@ the scope of definitive automated testing, which could be very helpful.
 
 <br>I used an addon for fire called [fangs](https://addons.mozilla.org/en-US/firefox/addon/fangs-screen-reader-emulator/contribute/roadblock/?src=search&version=1.0.8.1-signed.1-signed)
 
-<br>The output it gave for the main pages is: 
+<br>The output it gave for the main pages is:
 <br>"Page has two headings and seven links Nasreens's blog dash Internet Explorer Heading level one A blog by Nasreen Heading level four Posts colon List of two items bullet Link Three weeks at RC dash some reflections bullet LInk Mutable Default Parameters in Python Lists end Link Link Link Link Link"
 
 <br>This highlights the need to remove the empty links from the site.

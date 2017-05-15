@@ -1,5 +1,6 @@
 title: Three weeks at RC - some reflections
 date: 2017-03-09 17:00:00
+type: post
 
 <br>I'm three weeks into my batch at the [Recurse Center](https://www.recurse.com/), and time already feels like it's speeding up.  
 
@@ -14,4 +15,3 @@ date: 2017-03-09 17:00:00
 <br>Before I came to RC I participated in [LAB12](http://www.pitonneux.com/#3), where people who are learning programming independently form groups and work on a project together.  It is similar to RC in terms of philosophy and it's inclusive, everyone is friendly and helpful and encouraging, there is more focus on process than result.  Working with others  allowed me to learn new things, and step out of my comfort zone in a way I hadn't been able to while learning by myself.  This is how I feel at RC, but in a encompassing way - there is always someone who can help you, or work with you, or discuss a project, or encourage you to take on something difficult.  And you are surrounded by others who are working on projects they are curious about, and trying different ways to work together.  
 
 <br>The other thing that I have been thinking about, is how knowledge giver/ receiver hierarchies can be challenged.  Most people here have a lot more programming experience and knowledge than I do, but everyone knows different things.  There usually isn't an assumption that you already know something, and many people are working on something that they don't know much about.  I haven't felt self conscious about my limited experience before, but the first couple of times someone asked me if I knew something, or I asked what something was, I felt a little intimidated.  But then I noticed that everyone asks questions all the time.  Once or twice someone who was working on something I never even knew existed would ask me about something I was doing, and I realized that I had assumed it was simple because I knew about it.  How different is that than someone with loads of experience doing the same?  Which made me think about how many assumptions and hierarchies there are in interactions.  While RC is not separate from the world and the dynamics in it,  it feels like there is space here to try to interact with each other in gentler ways.  
-

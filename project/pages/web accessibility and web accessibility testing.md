@@ -1,5 +1,6 @@
 ﻿title: Web accessibility and web accessibility testing
 date: 2017-03-24 14:20:00
+type: post
 
 <br>
 ###What is web accessibility?
@@ -23,7 +24,7 @@ The site should be navigable using only a keyboard.
 <br>&nbsp;&nbsp;&nbsp;&nbsp;> The [document structure](http://webaim.org/techniques/semanticstructure/) should be [well organized](http://webaim.org/techniques/tables/)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;> [Forms should be navigable](http://www.afb.org/info/living-with-vision-loss/using-technology/creating-accessible-websites/accessible-forms/1235)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;> All elements should be focusable - [use css focus, not just hover](https://msdn.microsoft.com/en-us/library/ms971307.aspx)
-<br>&nbsp;&nbsp;&nbsp;&nbsp;> Include a [skip link](http://webaim.org/techniques/skipnav/) for navigation and other repetitive parts of the page (so if you want to get straight to the main content you don’t have to tab through/ listen to all the links in the header 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;> Include a [skip link](http://webaim.org/techniques/skipnav/) for navigation and other repetitive parts of the page (so if you want to get straight to the main content you don’t have to tab through/ listen to all the links in the header
 
 <br>
 ####Appearance/Clarity
@@ -40,7 +41,7 @@ Accessibility testing means checking the website meets accessibility criteria.  
 <br>&nbsp;&nbsp;&nbsp;&nbsp;> using an automated testing framework
 <br>&nbsp;&nbsp;&nbsp;&nbsp;> human-verifying the results of the automated testing
 <br>&nbsp;&nbsp;&nbsp;&nbsp;> Navigating through the site using only a keyboard, and using a screen reader (or screen reader emulator)
-<br>&nbsp;&nbsp;&nbsp;&nbsp;> user testing 
+<br>&nbsp;&nbsp;&nbsp;&nbsp;> user testing
 
 <br>It’s easier and more effective to plan for it from the start, and let your accessibility guide guide development (like all good testing?).
 
@@ -55,4 +56,3 @@ Accessibility testing means checking the website meets accessibility criteria.  
 <br>&nbsp;&nbsp;&nbsp;&nbsp;>  all the findings (even those mentioned above) have to be verified by a human
 
 <br>User testing is important, and should include a diverse group of user who use the web in different ways.    Having a developer or tester navigate through the website using their keyboard or a screen reader is a good way to check.  But if they don’t usually use these tools to use the web, they are inexperienced users and so will not have the same experience as a more experienced user of the tool.
-

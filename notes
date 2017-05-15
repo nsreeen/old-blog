@@ -24,29 +24,14 @@
       <div class="content" role="main">
         
 <div id = "all-posts-page" class="row"><div class="col-sm-10 col-sm-offset-1">
-<h2>Posts :</h2>
 
 <ul class="page-list">
   
-    <li><a href="/week-of-pairing-6-weeks-at-rc/">
-      The week of pairing
+    <li><a href="/testing/">
+      <h2>test</h2>
+      <p>this is a note</p>
+    </li> 
     <!-- </a> -  2017-04-12 13:30:00 </li> -->
-  
-    <li><a href="/web%20accessibility%20and%20web%20accessibility%20testing/">
-      Web accessibility and web accessibility testing
-    <!-- </a> -  2017-03-24 14:20:00 </li> -->
-  
-    <li><a href="/how-accessible-is-this-blog/">
-      How accessible is this blog?
-    <!-- </a> -  2017-03-24 14:00:00 </li> -->
-  
-    <li><a href="/Three%20weeks%20at%20RC%20-%20some%20reflections/">
-      Three weeks at RC - some reflections
-    <!-- </a> -  2017-03-09 17:00:00 </li> -->
-  
-    <li><a href="/mutable-default-parameters/">
-      Mutable Default Parameters in Python
-    <!-- </a> -  2017-03-03 12:00:00 </li> -->
   
 </ul>
 </div></div> <!--  end content block ROW-->
