@@ -1,7 +1,7 @@
 title: Mutable Default Parameters in Python  
 date: 2017-03-03 12:00:00
+published: true
 type: post
-
 
 
 <br> This week I learnt about the mutable default parameter trick, and it's pretty neat. I came across it reading (rather than while trying to fix something), but I guess it's one of those programming things that make you feel like a wizard when you use it knowingly, and a muggle while you're trying to figure out why something doesn't work.

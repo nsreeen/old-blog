@@ -1,6 +1,8 @@
 title: The week of pairing
 date: 2017-04-12 13:30:00
+published: true
 type: post
+
 
 A few weeks ago, I was feeling a bit stressed out: I didn't feel like I was making as much progress as I wanted on my projects, but I also felt like I wasn't really making the most of being at the Recurse Center.  I was trying to be open to all the things happening, but also feeling like I should be more productive.  I think I was doing and learning a lot, which I was really enjoying but things didn't feel very tangible.  I was really enjoying being here, but I felt dissatisfied with the way I was deciding how to spend my time.  I was spending more and more time worrying that I wasn't doing the right thing.
 

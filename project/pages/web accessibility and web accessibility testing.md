@@ -1,5 +1,6 @@
 ﻿title: Web accessibility and web accessibility testing
 date: 2017-03-24 14:20:00
+published: true
 type: post
 
 <br>

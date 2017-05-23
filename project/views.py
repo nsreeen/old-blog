@@ -4,14 +4,14 @@ from werkzeug.contrib.atom import AtomFeed
 
 @app.route('/')
 def index():
-    posts = [page for page in pages]
+    posts = [p for p in pages if p.meta['type']  == 'post']
     ordered_posts = sorted(posts, reverse=True,
      key=lambda p: p.meta['date'])
     return render_template('index.html', pages=ordered_posts)
 
 @app.route('/notes')
 def notes():
-    posts = [page for page in pages]
+    posts = [p for p in pages if p.meta['type']  == 'note' and p.meta['publish'] == 'true']
     ordered_posts = sorted(posts, reverse=True,
      key=lambda p: p.meta['date'])
     return render_template('notes.html', pages=ordered_posts)
@@ -21,8 +21,8 @@ def page(path):
     page = pages.get_or_404(path)
     return render_template('page.html', page=page)
 
-def entries_list(pages, limit=None):
-    entries = [p for p in pages]
+def blog_post_list(pages, limit=None):
+    entries = [p for p in pages if p.meta['type']  == 'post'] # CHECK THIS LATER!!!
     entries = sorted(entries, reverse=True)
     return entries[:limit]
 
@@ -31,7 +31,7 @@ def blog_feed():
     feed = AtomFeed('Recent Blog Postings',
                     feed_url='/atom.xml')#+url_for('blog_feed'),
                     #url='/')
-    blog_list = entries_list(pages, 10)
+    blog_list = blog_post_list(pages, 10)
     for b in blog_list:
         feed.add(b.meta['title'],
                  content_type='html',

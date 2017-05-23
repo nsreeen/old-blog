@@ -37,6 +37,7 @@ li {
 
 #header {
   border-bottom: 1px solid LightGrey;
+  margin-bottom: 10px;
 }
 
 #all-posts-page {

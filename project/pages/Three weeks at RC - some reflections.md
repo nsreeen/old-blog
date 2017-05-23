@@ -1,6 +1,8 @@
 title: Three weeks at RC - some reflections
 date: 2017-03-09 17:00:00
+published: true
 type: post
+
 
 <br>I'm three weeks into my batch at the [Recurse Center](https://www.recurse.com/), and time already feels like it's speeding up.  
 

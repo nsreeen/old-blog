@@ -1,5 +1,6 @@
 title: How accessible is this blog?
 date: 2017-03-24 14:00:00
+published: true
 type: post
 
 
