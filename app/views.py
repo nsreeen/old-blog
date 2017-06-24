@@ -4,14 +4,14 @@ from werkzeug.contrib.atom import AtomFeed
 
 @app.route('/')
 def index():
-    posts = [p for p in pages if p.meta['type']  == 'post']
+    posts = [p for p in pages if p.meta['type']  == 'post' and p.meta['published']  == True]
     ordered_posts = sorted(posts, reverse=True,
      key=lambda p: p.meta['date'])
     return render_template('index.html', pages=ordered_posts)
 
 @app.route('/notes')
 def notes():
-    posts = [p for p in pages if p.meta['type']  == 'note' and p.meta['publish'] == 'true']
+    posts = [p for p in pages if p.meta['type']  == 'note'  and p.meta['published'] == True]
     ordered_posts = sorted(posts, reverse=True,
      key=lambda p: p.meta['date'])
     return render_template('notes.html', pages=ordered_posts)
@@ -22,7 +22,7 @@ def page(path):
     return render_template('page.html', page=page)
 
 def blog_post_list(pages, limit=None):
-    entries = [p for p in pages if p.meta['type']  == 'post'] # CHECK THIS LATER!!!
+    entries = [p for p in pages if p.meta['type']  == 'post' and p.meta['published']  == True]
     entries = sorted(entries, reverse=True)
     return entries[:limit]
 

@@ -27,12 +27,6 @@
 
 <ul class="page-list">
   
-   <!-- if page.meta.type == "note" and page.meta.publish == 'true' %} -->
-    <li><a href="/notes/test/">
-      test
-    </li>
-    <!-- </a> -  2017-03-24 14:00:00 </li> -->
-  
 </ul>
 </div></div> <!--  end content block ROW-->
 
