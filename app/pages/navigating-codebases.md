@@ -54,7 +54,7 @@ Some changes I will make for part two:
 
 * I will use a second opensource project and task that is quite different, and use both in part two, to see if and how the nature of the task impacts the way people approach it. 
 
-I have a few people to work with for part two, and I am looking for more.  If spending an hour exploring an opensource project sounds like fun to you, and you want to help me with this project, I'd love to hear from you.
+I have a few people to work with for part two, and I am looking for more.  If spending an hour exploring an opensource project sounds like fun to you, and you want to help me with this project, please get in touch.
 
 
 

@@ -140,7 +140,8 @@ The following script:
 `| ?x <- | 5 !ADD | ?y !ADD 10 > > >`
 
 Could be represented by:
-[sketch the graph?]
+<img src="../static/img/AST-graph.svg"
+alt="Visualization of AST"/>
 
 How is this model created?  The parser has a set of functions to parse the four different units of the grammar.  The functions call each other recursively and consume the tokens. 
 
