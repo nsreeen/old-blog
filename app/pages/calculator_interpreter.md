@@ -4,8 +4,7 @@ published: false
 type: post
 
 
-# What is it and what does it do and why is this worth writing about?
-I made up a calculator language, interpreted it in Python, and made a REPL to interact with it.
+I made a toy calculator language, interpreted it in Python, and made a REPL to interact with it.
 
 So far, the language I made can:
 
@@ -13,19 +12,19 @@ So far, the language I made can:
 - assign variables
 - access previously assigned variables and use them in expressions
 
-Making this was a lot of fun.  Before I started, it seemed like too intimidating a project.  I am really glad I went for it anyway, and really appreciate the encouragement I got from other people to start it. (a special thanks to Elias!)
+Making this was a lot of fun.  Before I started, it seemed like too intimidating a project.  I am really glad I went for it anyway, and appreciate the encouragement I got from other people to start it. (a special thanks to Elias!)
 
 I feel it helped me to understand how programming languages work a little better, and made me even more intrigued to learn more.  Working on this also demystified what interpreters and compilers are; including on an intuitive level: there is no black box inside the computer that turns the code I write into meaning; there are just lots of layers of code that do different parts of the task.
 
-I decided to do a write up of this project in a way that would have helped me if I'd found it a month ago.
+I decided to do a write up of this project in a way that would have helped me if I'd found it when I started this project.
 
 
 #What does the language look like?
-When I made up the language, I tried to make it interesting - I thought that would be more fun.  Since then I have spent sometime debugging only to realize the script was working - I'd made a mistake with my interesting syntax (I've also learnt to appreciate error messages more, after spending time with my own badly written ones). 
+When I made up the language, I tried to make it interesting - I thought that would be more fun.  Since then I have spent sometime debugging only to realize the script was working - I'd made a mistake with my own interesting syntax (I've also learnt to appreciate error messages more, after spending time with my own badly written ones). 
 
-I found out that it's important to have a written grammar for the language.  This helps when you are trying to remember your own interesting syntax rules, and also maps the way you parse the language later.  It should include [terminal symbols, non terminal symbols](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols), and rules. 
+I found out that it's important to have a written grammar for the language.  This helps when you are trying to remember interesting syntax rules, and also maps the way you parse the language later.  It should include [terminal symbols, non terminal symbols](https://en.wikipedia.org/wiki/Terminal_and_nonterminal_symbols), and rules. 
 
-There is only one rule: all statements must be wrapped in `|` and `>`, which are equivalent to "(" and ")".
+There is only one rule in my language: all statements must be wrapped in `|` and `>`, which are equivalent to "(" and ")".
 
 Terminal symbols are units that cannot really be broken down further. They are:
 
@@ -101,13 +100,13 @@ At the end of this stage there is a series of tokens, stored as named tuples tha
 # What is a recursive descent parser?
 My interpreter uses the recursive descent parser model.  This kind of parser parses input according to the grammar of the language: it has a set of procedures (ie. functions), and each function deals with a separate non terminal unit of the grammar.  These procedures call each other recursively.  So for my language the non terminal units are: program, statement, expression, assignment;  `parse_program` calls `parse_statement`, which calls `parse_assignment` or `parse_expression`.  You can have an expression inside an expression inside an expression, so `parse_expression` might have to call itself several times. 
 
-The type of recursive descent parser I used, called predictive, only looks at most a few tokens ahead at a time.  So it looks ahead only enough to determine whether to send the input on to another function (and determine which function to send it to), or to return it.
+The type of recursive descent parser I wrote, called predictive, only looks at most a few tokens ahead at a time.  So it looks ahead only enough to determine whether to send the input on to another function (and determine which function to send it to), or to return it.
 
 
 # Part 2: parse the tokens and make a representation of the code (parser)
 This step takes a list of tokens, and according to their types it creates an abstract representation of the program. 
 
-The grammar of the language is used to organize the abstract representation of the program's meaning.  My language grammar has four non terminal parts:
+The grammar of the language is used to organize the abstract representation of the program's meaning.  My language's grammar has four non terminal parts:
 
 program
 statement
@@ -138,7 +137,7 @@ class Assignment():
 ```
 
 The following script:
-`| ?x <- | 5 !ADD | ?y !ADD 10 >`
+`| ?x <- | 5 !ADD | ?y !ADD 10 > > >`
 
 Could be represented by:
 [sketch the graph?]
@@ -147,7 +146,8 @@ How is this model created?  The parser has a set of functions to parse the four 
 
 For example, when `parse_program` is called it checks there are tokens, and then calls `parse_statement` in a while loop until there are no more tokens. `parse_statement` looks at the next few tokens to determine whether the statement is an expression or assignment.  If there is a variable name (starting with `?`) and an assignment symbol (`<-`) it calls `parse_assignment`, otherwise it calls `parse_expression`. 
 
-At the end of this stage there is an instance of the Program class, which has a list of statements.  Each statement can be an instance of either the Expression class or the Assignment class, and can contain another instance of the expression class as an attribute. The expression instances do not yet have value attributes, these will be added in the evaluation stage.  We can call this an [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree).
+At the end of this stage there is an instance of the Program class, which has a list of statements as an attribute.  Each statement can be an instance of either the Expression class or the Assignment class, and can contain another instance of the expression class as an attribute. The expression instances do not yet have value attributes, these will be added in the evaluation stage.  We can call this an [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree).
+
 
 # Part 3: semantic analysis and evaluation 
 This step iterates through the statements in the program, and determines their values.  It is similar to step two, in that each non terminal part of the language grammar has an evaluate function, and the functions are called recursively to return the values of all levels of nested expressions. 
@@ -157,7 +157,7 @@ At this point variables are also added to the dictionary; if a statement is an a
 
 
 # How does the REPL work?
-REPL stands for read evaluate print loop.  I made a REPL by writing a script that accepts input, evaluates it (interprets it according to the steps above), prints the output, in a loop.
+REPL stands for read evaluate print loop.  I made a REPL by writing a script that accepts input, evaluates it (interprets it according to the steps above), and prints the output, in a loop.
 
 When you run the REPL script, it creates a dictionary and then enters a loop.  Each cycle through the loop waits for input.  If the input is 'q' the function returns and the program ends, if it's 'h' help is printed to the terminal. 
 
