@@ -12,9 +12,6 @@
   <div id="header" class="container-fluid">
     <div class="row">
       <div class="col-sm-4 col-sm-offset-1"><a href="/"><h1>Nasreen's Blog</h1></a></div>
-      <div class="col-sm-1 col-sm-offset-3"><a href="/"><h1>Blog </h1></a></div>
-      <div class="col-sm-1 "><a href="/notes"><h1> Notes </h1></a></div>
-      <div class="col-sm-1 "><a href=" "><h1>Projects</h1></a></div>
     </div> <!--  end header ROW-->
   </div><!--  end header CONTAINER-->
 
