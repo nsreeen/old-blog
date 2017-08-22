@@ -38,10 +38,10 @@ Regular expressions patterns are implemented as finite state machines! I find th
 <p>A finite state machine is just a model for understanding something.  It models something that has different states, and that can only be in one of those states at one time. </p>
 <p><br>
 For example, a door can either be locked or not locked:
-<img alt="An image of two circles: one has 'locked' written inside, and the other has 'unlocked' written inside.  There are two arrows, each pointing from one circle to the other." src="/door_states.jpeg" /></p>
+<img alt="An image of two circles: one has 'locked' written inside, and the other has 'unlocked' written inside.  There are two arrows, each pointing from one circle to the other." src="/door_states.png" /></p>
 <p><br>
 We can add the conditions that cause the state to change:
-<img alt="The same image as above, but with labels added to the arrows: 'turn key right' leads to 'unlocked', and 'turn key left' leads to 'locked'." src="/door_states_with_conditions.jpeg" /></p>
+<img alt="The same image as above, but with labels added to the arrows: 'turn key right' leads to 'unlocked', and 'turn key left' leads to 'locked'." src="/door_states_with_conditions.png" /></p>
 <p><br>
 A finite state machine is defined by:
 - possible states
@@ -61,7 +61,7 @@ So:
 - but <code>ac</code> and <code>acb</code> wouldn't match.</p>
 <p><br>
 We can draw this as a finite state machine:
-<img alt="Image of a finite state machine with circles representing the states 0, 1, 2, 3, and 'not a match'.  'a' can move us from state 0 to 1, 'b' from state 1 to 2, and 'c' from state 2 to 3.  State 3 is double circled." src="/regex_machine.jpeg" /></p>
+<img alt="Image of a finite state machine with circles representing the states 0, 1, 2, 3, and 'not a match'.  'a' can move us from state 0 to 1, 'b' from state 1 to 2, and 'c' from state 2 to 3.  State 3 is double circled." src="/regex_machine.png" /></p>
 <p><br>
 Notes:
 <em> the double circle shows that state 3 is an end state (ie. if we get to state 3, we have found a match)

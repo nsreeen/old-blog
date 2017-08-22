@@ -19,11 +19,11 @@ A finite state machine is just a model for understanding something.  It models s
 
 <br>
 For example, a door can either be locked or not locked:
-![An image of two circles: one has 'locked' written inside, and the other has 'unlocked' written inside.  There are two arrows, each pointing from one circle to the other.](/door_states.jpeg)
+![An image of two circles: one has 'locked' written inside, and the other has 'unlocked' written inside.  There are two arrows, each pointing from one circle to the other.](/door_states.png)
 
 <br>
 We can add the conditions that cause the state to change:
-![The same image as above, but with labels added to the arrows: 'turn key right' leads to 'unlocked', and 'turn key left' leads to 'locked'.](/door_states_with_conditions.jpeg)
+![The same image as above, but with labels added to the arrows: 'turn key right' leads to 'unlocked', and 'turn key left' leads to 'locked'.](/door_states_with_conditions.png)
 
 <br>
 A finite state machine is defined by:
@@ -48,7 +48,7 @@ So:
 
 <br>
 We can draw this as a finite state machine:
-![Image of a finite state machine with circles representing the states 0, 1, 2, 3, and 'not a match'.  'a' can move us from state 0 to 1, 'b' from state 1 to 2, and 'c' from state 2 to 3.  State 3 is double circled.](/regex_machine.jpeg)
+![Image of a finite state machine with circles representing the states 0, 1, 2, 3, and 'not a match'.  'a' can move us from state 0 to 1, 'b' from state 1 to 2, and 'c' from state 2 to 3.  State 3 is double circled.](/regex_machine.png)
 
 <br>
 Notes:
