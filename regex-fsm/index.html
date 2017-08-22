@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Nasreen's blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel=StyleSheet href="/../static/style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  </head>
+  <body>
+
+  <div id="header" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-1"><a href="/"><h1>Nasreen's Blog</h1></a></div>
+    </div> <!--  end header ROW-->
+  </div><!--  end header CONTAINER-->
+
+  <div id="body" class="container-fluid">
+    <!-- <div class="row"><div class="col-sm-10 col-sm-offset-1"> -->
+    <div class="container">
+      <div class="content" role="main">
+        
+  <div class="row"><div class="col-sm-10 col-sm-offset-1">
+<h2>Regex and finite state machines</h2>
+
+<!--  <p>2017-08-22 13:30:00</p> -->
+
+<p><br>
+Regular expressions patterns are implemented as finite state machines! I find this pretty cool, and finding this out has helped me to understand both things a bit better. </p>
+<p><br></p>
+<h2>Why is this cool?</h2>
+<p>This means that we can:
+- find substrings on just one pass through a string, 
+- without looking ahead (only knowing about one character at a time),
+- while only keeping track of a few extra  variables (or states).</p>
+<p><br></p>
+<h2>What is a finite state machine?</h2>
+<p>A finite state machine is just a model for understanding something.  It models something that has different states, and that can only be in one of those states at one time. </p>
+<p><br>
+For example, a door can either be locked or not locked:
+<img alt="An image of two circles: one has 'locked' written inside, and the other has 'unlocked' written inside.  There are two arrows, each pointing from one circle to the other." src="/door_states.jpeg" /></p>
+<p><br>
+We can add the conditions that cause the state to change:
+<img alt="The same image as above, but with labels added to the arrows: 'turn key right' leads to 'unlocked', and 'turn key left' leads to 'locked'." src="/door_states_with_conditions.jpeg" /></p>
+<p><br>
+A finite state machine is defined by:
+- possible states
+- conditions that cause transitions between states to occur
+- the starting state (if appropriate - the door is always either locked or unlocked, so the diagrams above don't have a separate starting state)</p>
+<p><br></p>
+<h2>A regular expression as a finite state machine</h2>
+<p>If I wanted to search a string for substrings that:
+- start with <code>a</code>,
+- have one or more <code>b</code>'s in the middle,
+- and end with <code>c</code>,</p>
+<p><br>
+I could search for the regex pattern <code>ab+c</code> (where <code>+</code> means the previous character can occur one or more times).</p>
+<p><br>
+So:
+- <code>abc</code>, <code>abbbc</code>, and <code>abbbbbbbbc</code> would all match, 
+- but <code>ac</code> and <code>acb</code> wouldn't match.</p>
+<p><br>
+We can draw this as a finite state machine:
+<img alt="Image of a finite state machine with circles representing the states 0, 1, 2, 3, and 'not a match'.  'a' can move us from state 0 to 1, 'b' from state 1 to 2, and 'c' from state 2 to 3.  State 3 is double circled." src="/regex_machine.jpeg" /></p>
+<p><br>
+Notes:
+<em> the double circle shows that state 3 is an end state (ie. if we get to state 3, we have found a match)
+</em> some inputs do not cause a change in state (eg. in state 0, any input that is not <code>a</code> causes the state to remain 0)</p>
+<p><br></p>
+<h2>Keeping track of states</h2>
+<p>If we want to find out if a string (say: <code>aabc</code>) contains our pattern, we will iterate through the string and keep track of our possible states. We'll start out with only one possible states: state 0.  At each character in the string, we will update all possible states with the new input, removing states that <code>do not match</code></p>
+<p><br>
+We will iterate through each character like this:</p>
+<p>Current possible States | Input character | Update possible states 
+  ------------- | -------------   | -------------
+  0             | <code>a</code>             | 1 
+  0, 1          | <code>a</code>             | 1 
+  0, 1          | <code>b</code>             | 0, 2
+  0, 2          | <code>c</code>             | 0, 3</p>
+<p><br>
+State 3 is one of our current states, so we know that the string contains our pattern! </p>
+<p><br>
+If we wanted to find the matching substrings (ie. return the index of each match), we'd have to also keep track of those too. </p>
+<p><br><br><br></p>
+</div></div> <!--  end content block ROW-->
+
+
+      </div>
+    </div> <!--  end content block -->
+
+  <!-- </div></div> <!  end content block ROW-->
+
+</div><!--  end content block CONTAINER -->
+  </body>
+</html>
