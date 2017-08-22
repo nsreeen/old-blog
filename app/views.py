@@ -4,7 +4,7 @@ from werkzeug.contrib.atom import AtomFeed
 
 @app.route('/')
 def index():
-    posts = [p for p in pages if p.meta['type']  == 'post' and p.meta['published']  == True]
+    posts = [p for p in pages if p.meta['type']  == 'post']
     ordered_posts = sorted(posts, reverse=True, key=lambda p: p.meta['date'])
     return render_template('index.html', pages=ordered_posts)
 
